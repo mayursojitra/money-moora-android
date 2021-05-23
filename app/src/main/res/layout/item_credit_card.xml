@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clCard"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/card_primary_bg"
+        android:outlineProvider="background"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivTopCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/top_teal_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivBottomCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bottom_teal_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLblCardNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="CARD NUMBER"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_regular"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCardNumber"
+            app:layout_constraintTop_toBottomOf="@id/tvLblCardNumber"
+            app:layout_constraintLeft_toLeftOf="@id/tvLblCardNumber"
+            android:layout_width="wrap_content"
+            android:text="**** **** **** 1234"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvLblCardHolder"
+            app:layout_constraintLeft_toLeftOf="@id/tvLblCardNumber"
+            app:layout_constraintBottom_toTopOf="@id/tvCardHolder"
+            android:layout_width="wrap_content"
+            android:text="CARD HOLDERNAME"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_regular"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvCardHolder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/tvLblCardNumber"
+            app:layout_constraintLeft_toRightOf="@id/tvExpiryDate"
+            android:layout_width="wrap_content"
+            android:text="Amanda Alex"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvLblExpiryDate"
+            app:layout_constraintLeft_toLeftOf="@id/tvExpiryDate"
+            app:layout_constraintBottom_toTopOf="@id/tvExpiryDate"
+            android:layout_width="wrap_content"
+            android:text="EXPIRY DATE"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_regular"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvExpiryDate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:text="03-01-2023"
+            android:textColor="@color/white"
+            android:fontFamily="@font/inter_bold"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
